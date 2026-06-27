@@ -1,10 +1,7 @@
-
 import axios from "axios";
-import { logger } from "../utils/loggers.js"
 
-export const createTinyUrlService = async (data)=>{
-    logger("Request","Url shorting request received");
-    const response = await axios.post(
+export const urlShortService = async (data)=>{
+    const result = await axios.post(
         `${process.env.BASE_URL}/create`,
         data,
         {
@@ -14,6 +11,18 @@ export const createTinyUrlService = async (data)=>{
             }
         }
     )
-    logger("Complete","Url is shortened successfully");
-    return response.data;
+    return result.data;
+}
+
+export const getUrlService = async (domain,alias)=>{
+    const result = await axios.get(
+        `${process.env.BASE_URL}/alias/${domain}/${alias}`,
+        {
+            headers : {
+                Authorization : `Bearer ${process.env.TOKEN}`,
+                "Content-Type" : "application/json"
+            }
+        }
+    )
+    return result.data;
 }

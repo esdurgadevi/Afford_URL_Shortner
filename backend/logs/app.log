@@ -1,6 +1,23 @@
-[27/6/2026, 8:42:32 pm] [INFO] Server Started on port 5000
-[27/6/2026, 10:02:07 pm] [INFO] Server Started on port 5000
-[27/6/2026, 10:03:10 pm] [INFO] Server Started on port 5000
-[27/6/2026, 10:10:05 pm] [INFO] Server Started on port 5000
-[27/6/2026, 10:10:08 pm] [Request] Url shorting request received
-[27/6/2026, 10:10:09 pm] [Complete] Url is shortened successfully
+[27/6/2026, 10:36:48 pm] [Server] Server is running in 5000[27/6/2026, 10:47:36 pm] [Server] Server is running in 5000[27/6/2026, 10:48:01 pm] [Server] Server is running in 5000
+[27/6/2026, 10:48:08 pm] [Error] Error shorting the url
+[27/6/2026, 10:49:24 pm] [Server] Server is running in 5000
+[27/6/2026, 10:49:32 pm] [Success] URL Shorted successfully
+[27/6/2026, 10:50:31 pm] [Server] Server is running in 5000
+[27/6/2026, 10:50:35 pm] [Error] Error shorting the url
+[27/6/2026, 10:51:22 pm] [Success] URL Shorted successfully
+[27/6/2026, 10:52:10 pm] [Server] Server is running in 5000
+[27/6/2026, 10:52:16 pm] [Error] Request failed with status code 422
+[27/6/2026, 10:55:27 pm] [Error] getaddrinfo ENOTFOUND api.tinyurl.com
+[27/6/2026, 10:56:06 pm] [Error] getaddrinfo ENOTFOUND api.tinyurl.com
+[27/6/2026, 11:03:17 pm] [Success] URL Shorted successfully
+[27/6/2026, 11:07:54 pm] [Server] Server is running in 5000
+[27/6/2026, 11:17:56 pm] [Success] Url get successfully
+[27/6/2026, 11:22:07 pm] [Server] Server is running in 5000
+[27/6/2026, 11:22:11 pm] [Error] Request failed with status code 501
+[27/6/2026, 11:34:38 pm] [Server] Server is running in 5000
+[27/6/2026, 11:34:47 pm] [Error] Request failed with status code 501
+[27/6/2026, 11:35:09 pm] [Error] Request failed with status code 501
+[27/6/2026, 11:35:29 pm] [Server] Server is running in 5000
+[27/6/2026, 11:35:33 pm] [Error] Request failed with status code 501
+[27/6/2026, 11:38:17 pm] [Server] Server is running in 5000
+[27/6/2026, 11:38:22 pm] [Success] Url get successfully

@@ -1,9 +1,9 @@
 import express from "express";
-
-import { createTinyUrl } from "../controllers/urlController.js"
+import { urlShortController,getUrls } from "../controllers/urlController.js";
 
 const router = express.Router();
 
-router.post("/create",createTinyUrl);
+router.get("/:domain/:alias",getUrls);
+router.post("/create",urlShortController);
 
 export default router;

@@ -1,10 +1,9 @@
 import fs from "fs";
 
-export function logger(type,message)
-{
+export const logger = (type,message)=>{
     const date = new Date().toLocaleString();
 
-    const write = `[${date}] [${type}] ${message}\n`;
+    const mes = `[${date}] [${type}] ${message}\n`
 
-    fs.appendFileSync("./logs/app.log",write);
-}
+    fs.appendFileSync("./logs/app.log",mes);
+} 
