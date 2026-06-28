@@ -27,11 +27,13 @@ function ShortUrl()
     }
     return <>
        <h1>Short Url</h1>
-       <input value={url} onChange={(event)=>setUrl(event.target.value)} />
-       <input value={alias} onChange={(event)=>setAlias(event.target.value)} />
-       <button onClick={()=>getShortUrl()}>Get Short Url</button>
+       <div className="container">
+            <input value={url} onChange={(event)=>setUrl(event.target.value)} placeholder="Enter the URL" />
+            <input value={alias} onChange={(event)=>setAlias(event.target.value)} placeholder="Enter the alias you want" />
+            <button onClick={()=>getShortUrl()}>Get Short Url</button>
+            <a href={response.tiny_url} target="_blank">{response.tiny_url}</a>
+       </div>
        <br></br>
-       <a href={response.tiny_url} target="_blank">{response.tiny_url}</a>
     </>
 }
 export default ShortUrl;

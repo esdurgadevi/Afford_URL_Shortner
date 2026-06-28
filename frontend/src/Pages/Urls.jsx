@@ -26,21 +26,22 @@ function Urls()
 
     return <>
        <h1>Shorted Urls Details</h1>
-
-       <input value={domain} onChange={(event)=>setDomain(event.target.value)} />
-       <input value={alias} onChange={(event)=>setAlias(event.target.value)} />
-
-       <button onClick={()=>getUrls()}>Submit</button>
-       {
-           flag && (
-             <ul>
-                <li>{urls.domain}</li>
-                <li>{urls.tiny_url}</li>
-                <li>{urls.url}</li>
-                <li>{urls.user?.email}</li>
-            </ul>
-           )
-       }
+       <div className="container">
+            <input value={domain} onChange={(event)=>setDomain(event.target.value)} placeholder="Enter the domain" />
+            <input value={alias} onChange={(event)=>setAlias(event.target.value)} placeholder="Enter the alias" />
+            <button onClick={()=>getUrls()}>Submit</button>
+            {
+                flag && 
+                (
+                    <div>
+                        <p><strong style={{color:"purple"}}>Domain : </strong>{urls.domain}</p>
+                        <strong style={{color:"purple"}}>Short Url : </strong><a href={urls.tiny_url} target="_blank">{urls.tiny_url}</a>
+                        <p><strong style={{color:"purple"}}>Original Url : </strong>{urls.url}</p>
+                        <p><strong style={{color:"purple"}}>User Email : </strong>{urls.user?.email}</p>
+                    </div>
+                )
+            }
+       </div>
     </>
 }
 
