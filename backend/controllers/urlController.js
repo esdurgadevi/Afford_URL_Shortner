@@ -12,8 +12,8 @@ export const urlShortController = async (req,res)=>{
         }
 
         const response = await urlShortService(req.body);
-        logger("Success","URL Shorted successfully");
-        return res.status(201).json(response);
+        if(response.source == 'api') logger("Success","URL Shorted successfully");
+        return res.status(201).json(response.data.data);
     }
     catch(error)
     {
@@ -30,7 +30,7 @@ export const getUrls = async (req,res)=>{
         const response = await getUrlService(req.params.domain,req.params.alias);
         console.log(req.params);
         logger("Success","Url get successfully");
-        return res.status(200).json(response);
+        return res.status(200).json(response.data);
     }
     catch(error){
         logger("Error",error.message);

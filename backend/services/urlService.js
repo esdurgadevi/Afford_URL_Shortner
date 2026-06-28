@@ -6,7 +6,10 @@ export const urlShortService = async (data)=>{
     if(urlCache.has(data.url))
     {
         logger("Cache","Short url from cache");
-        return urlCache.get(data.url);
+        return {
+            source : "cache",
+            data : urlCache.get(data.url)
+        };
     }
 
     const result = await axios.post(
@@ -20,7 +23,10 @@ export const urlShortService = async (data)=>{
         }
     )
     urlCache.set(data.url,result.data);
-    return result.data;
+    return {
+        source : "api",
+        data : result.data
+    };
 }
 
 export const getUrlService = async (domain,alias)=>{
