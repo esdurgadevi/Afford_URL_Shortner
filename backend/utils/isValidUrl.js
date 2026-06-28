@@ -2,7 +2,7 @@
 export const isValidUrl = (url) =>{
     try{
         const parseurl = new URL(url);
-        return parseurl === 'http:' || parseurl === 'https:';
+        return parseurl.protocol === 'http:' || parseurl.protocol === 'https:';
     }
     catch(error)
     {
