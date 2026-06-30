@@ -27,6 +27,8 @@ function Urls()
     return <>
        <h1>Shorted Urls Details</h1>
        <div className="container">
+
+        
             <input value={domain} onChange={(event)=>setDomain(event.target.value)} placeholder="Enter the domain" />
             <input value={alias} onChange={(event)=>setAlias(event.target.value)} placeholder="Enter the alias" />
             <button onClick={()=>getUrls()}>Submit</button>
